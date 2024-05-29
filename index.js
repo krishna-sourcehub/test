@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDb = require('./db'); 
 const verifyfirebase =require('./routes/verifyfirebasedata');
-const getprofile =require('./routes/getprofile');
+// const getprofile =require('./routes/getprofile');
 const deleteuser=require('./routes/deleteaccount')
 const cors = require('cors');
 const path = require('path'); 
@@ -30,7 +30,7 @@ app.use('/checkUserName', checkUsername);
 app.use('/logout', logout);
 app.use('/editProfile', editprofile);
 app.use('/deleteUser', deleteuser);
-app.use('/getProfile', getprofile);
+// app.use('/getProfile', getprofile);
 app.use('/login', verifyfirebase);
 
 
