@@ -31,7 +31,7 @@ app.use('/logout', logout);
 app.use('/editProfile', editprofile);
 app.use('/deleteUser', deleteuser);
 app.use('/getProfile', getprofile);
-app.use('/verifyFirebaseData', verifyfirebase);
+app.use('/login', verifyfirebase);
 
 
 
