@@ -6,7 +6,7 @@ var router = express.Router();
 
 
 
-router.post("/",  verifyToken,  async (req, res) => {
+router.get("/",  verifyToken,  async (req, res) => {
     try {
         const firebaseResponse = req.firebaseResponse;
         const idToken=req.idToken;
@@ -15,7 +15,7 @@ router.post("/",  verifyToken,  async (req, res) => {
         var saveusers= await verifyAndSave(firebaseResponse,idToken);
         // console.log("verify and save the data", saveusers)
         if(saveusers==true){
-            res.status(201).json({status:true,message:"Sign In Successfully"})
+            res.status(201).json({status:true,message:"login In Successfully"})
         }
         else{
         res.status(401).json({status:false, message:"error occur",response:saveusers})
